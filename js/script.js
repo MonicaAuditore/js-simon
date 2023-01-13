@@ -39,7 +39,6 @@ setTimeout(myFunctionB, 3000);
 function myFunctionB() {
   const numUno = prompt("inserisci il primo numero");
   controllo(numUno);
-  console.log("numUno", numUno);
   const numDue = prompt("inserisci il secondo numero");
   controllo(numDue);
   const numTre = prompt("inserisci il terzo numero");
@@ -64,15 +63,14 @@ function controllo(numeroUtente) {
 console.log("arrayUtente", arrayUtente);
 
 arrayRisultato = [];
+const messaggioFinale = document.querySelector(".risultato");
 
 setTimeout(myFunctionC, 6000);
 function myFunctionC() {
   for (let i = 0; i < numeriRandArrey.length; i++) {
     if (arrayUtente[i] == numeriRandArrey[i]) {
       arrayRisultato.push(arrayUtente[i]);
-      console.log(arrayUtente[i]);
-    } else {
-      console.log("test no");
+      messaggioFinale.innerHTML = `<h2>Il tuo punteggio è ${arrayRisultato.length}, hai indovinato i seguenti numeri: ${arrayRisultato}.</h2>`;
     }
   }
 }
