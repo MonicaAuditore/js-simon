@@ -35,21 +35,28 @@ function myFunction() {
   mex.classList.add("hidden");
 }
 
-numeriUtente = [];
-
-function controllo(numeroUtente) {
-  if (isNaN(numeroUtente)) {
-    console.log("test");
-  }
-}
-
 setTimeout(myFunctionB, 3000);
 function myFunctionB() {
   const numUno = prompt("inserisci il primo numero");
   controllo(numUno);
   console.log(numUno);
-  // const numDue = prompt("inserisci il secondo numero");
-  // const numTre = prompt("inserisci il terzo numero");
-  // const numQuattro = prompt("inserisci il quarto numero");
-  // const numCinque = prompt("inserisci il quinto numero");
+  const numDue = prompt("inserisci il secondo numero");
+  controllo(numDue);
+  const numTre = prompt("inserisci il terzo numero");
+  controllo(numTre);
+  const numQuattro = prompt("inserisci il quarto numero");
+  controllo(numQuattro);
+  const numCinque = prompt("inserisci il quinto numero");
+  controllo(numCinque);
 }
+
+arrayUtente = [];
+function controllo(numeroUtente) {
+  if (isNaN(numeroUtente)) {
+    alert("Numero non valido, ricarica e riprova.");
+  } else {
+    arrayUtente.push(numeroUtente);
+  }
+}
+
+console.log(arrayUtente);
