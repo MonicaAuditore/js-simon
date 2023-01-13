@@ -30,9 +30,26 @@ console.log(numeriRandArrey);
 const mex = document.querySelector(".messaggioNumeri");
 mex.innerHTML += `<h1>${numeriRandArrey}</h1>`;
 
-setTimeout(myFunction, 30000);
+setTimeout(myFunction, 2000);
 function myFunction() {
   mex.classList.add("hidden");
 }
 
-const numUno = prompt("inserisci il primo numero");
+numeriUtente = [];
+
+function controllo(numeroUtente) {
+  if (isNaN(numeroUtente)) {
+    console.log("test");
+  }
+}
+
+setTimeout(myFunctionB, 3000);
+function myFunctionB() {
+  const numUno = prompt("inserisci il primo numero");
+  controllo(numUno);
+  console.log(numUno);
+  // const numDue = prompt("inserisci il secondo numero");
+  // const numTre = prompt("inserisci il terzo numero");
+  // const numQuattro = prompt("inserisci il quarto numero");
+  // const numCinque = prompt("inserisci il quinto numero");
+}
