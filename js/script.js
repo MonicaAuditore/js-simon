@@ -25,7 +25,7 @@ for (let i = 0; i < 5; i++) {
   numeriRandArrey.push(numbers);
 }
 
-console.log(numeriRandArrey);
+console.log("numeriRandArrey", numeriRandArrey);
 
 const mex = document.querySelector(".messaggioNumeri");
 mex.innerHTML += `<h1>${numeriRandArrey}</h1>`;
@@ -39,7 +39,7 @@ setTimeout(myFunctionB, 3000);
 function myFunctionB() {
   const numUno = prompt("inserisci il primo numero");
   controllo(numUno);
-  console.log(numUno);
+  console.log("numUno", numUno);
   const numDue = prompt("inserisci il secondo numero");
   controllo(numDue);
   const numTre = prompt("inserisci il terzo numero");
@@ -51,12 +51,30 @@ function myFunctionB() {
 }
 
 arrayUtente = [];
+
 function controllo(numeroUtente) {
-  if (isNaN(numeroUtente)) {
+  if (isNaN(numeroUtente) || numeroUtente == "") {
     alert("Numero non valido, ricarica e riprova.");
+    myFunctionB();
   } else {
     arrayUtente.push(numeroUtente);
   }
 }
 
-console.log(arrayUtente);
+console.log("arrayUtente", arrayUtente);
+
+arrayRisultato = [];
+
+setTimeout(myFunctionC, 6000);
+function myFunctionC() {
+  for (let i = 0; i < numeriRandArrey.length; i++) {
+    if (arrayUtente[i] == numeriRandArrey[i]) {
+      arrayRisultato.push(arrayUtente[i]);
+      console.log(arrayUtente[i]);
+    } else {
+      console.log("test no");
+    }
+  }
+}
+
+console.log("arrayRisultato", arrayRisultato);
