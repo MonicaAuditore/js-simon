@@ -26,3 +26,13 @@ for (let i = 0; i < 5; i++) {
 }
 
 console.log(numeriRandArrey);
+
+const mex = document.querySelector(".messaggioNumeri");
+mex.innerHTML += `<h1>${numeriRandArrey}</h1>`;
+
+setTimeout(myFunction, 30000);
+function myFunction() {
+  mex.classList.add("hidden");
+}
+
+const numUno = prompt("inserisci il primo numero");
