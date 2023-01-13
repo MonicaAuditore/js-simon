@@ -30,12 +30,12 @@ console.log("numeriRandArrey", numeriRandArrey);
 const mex = document.querySelector(".messaggioNumeri");
 mex.innerHTML += `<h1>${numeriRandArrey}</h1>`;
 
-setTimeout(myFunction, 2000);
+setTimeout(myFunction, 30000);
 function myFunction() {
   mex.classList.add("hidden");
 }
 
-setTimeout(myFunctionB, 3000);
+setTimeout(myFunctionB, 31000);
 function myFunctionB() {
   const numUno = prompt("inserisci il primo numero");
   controllo(numUno);
@@ -65,7 +65,7 @@ console.log("arrayUtente", arrayUtente);
 arrayRisultato = [];
 const messaggioFinale = document.querySelector(".risultato");
 
-setTimeout(myFunctionC, 6000);
+setTimeout(myFunctionC, 32000);
 function myFunctionC() {
   for (let i = 0; i < numeriRandArrey.length; i++) {
     if (arrayUtente[i] == numeriRandArrey[i]) {
