@@ -70,7 +70,7 @@ function myFunctionC() {
   for (let i = 0; i < numeriRandArrey.length; i++) {
     if (arrayUtente[i] == numeriRandArrey[i]) {
       arrayRisultato.push(arrayUtente[i]);
-      messaggioFinale.innerHTML = `<h2>Il tuo punteggio è ${arrayRisultato.length}, hai indovinato i seguenti numeri: ${arrayRisultato}.</h2>`;
+      messaggioFinale.innerHTML = `<h2>Il tuo punteggio è ${arrayRisultato.length}.<br> Hai indovinato i seguenti numeri: ${arrayRisultato}.</h2>`;
     }
   }
 }
